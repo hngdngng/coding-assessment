@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Quiz</title>
+    <!-- Style sheet links (reset.css, bootstrap CDN, style.css)-->
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <button class="btn btn-light btn-score" type="button">View Highscores</button>
+            <h6 id="timer">Time: 0</h6>
+        </form>
+    </nav>
+    <div class="container-md start-body">
+        <h1>Coding Quiz Challenge</h1>
+        <h6>Answer the following code-related questions within the time limit. Keep in mind that incorrect answers will
+            penalize your score and time by 10s.</h6>
+        <button class="btn btn-light btn-start" type="button">Start Quiz</button>
+    </div>
+    <div class="container-md quiz-body">
+        <h2></h2>
+        <ol></ol>
+    </div>
+    <div class="container-md end-body">
+        <h1>All done!</h1>
+        <h6>Your final score is 0.</h6>
+        <form class="form-inline">
+            <div class="form-group">
+              <label for="initials">Enter initials</label>
+              <input type="text" id="initials" class="form-control mx-sm-3">
+              <button type="submit" class="btn btn-primary my-1">Submit</button>
+            </div>
+          </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
