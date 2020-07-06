@@ -9,8 +9,7 @@ var c3 = document.querySelector("#c3");
 var c4 = document.querySelector("#c4");
 var userIndex = 0;
 var timeLeft = 75;
-var timerInterval;
-var userChoice;
+var timerInterval, userChoice;
 
 function startQuiz() {
     document.querySelector(".start-body").style.display = "none";
@@ -67,8 +66,26 @@ function timer() {
     }, 1000); //executes code inside setInterval function every second (1000ms)
 }
 
-function highScore() {
+function highscoreScreen() {
     window.location.href = "./highscores.html";
+}
+
+function highscoreUpdate() {
+    var initialsInput = document.querySelector("#initials");
+    if (initialsInput === "") {
+        return
+    } else {
+        var userLog = initialsInput.value.trim() + ": " + timeLeft;
+        var listHighscore = JSON.parse(localStorage.getItem("listHighscore"));
+        if (listHighscore != null){
+            listHighscore.push(userLog);
+        } else {
+            listHighscore = [];
+            listHighscore.push(userLog);
+        }
+        initialsInput.value = "";
+    }
+    localStorage.setItem("listHighscore", JSON.stringify(listHighscore)); //create a local storage memory item called listHighscores as the array scores in code
 }
 
 document.querySelector(".btn-start").addEventListener("click", function () {
@@ -76,5 +93,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     timer();
 }); //when start is clicked, start the quiz (startQuizFn) and start the timer (TimerFn)
 document.querySelector("ul").addEventListener("click", userSelect); //when user selects an answer choice, run userSelect function
-document.querySelector(".btn-score").addEventListener("click", highScore);
-document.querySelector("#submit").addEventListener("click", highScore);
+document.querySelector(".btn-score").addEventListener("click", highscoreScreen);
+document.querySelector("#submit").addEventListener("click", function(){
+    highscoreUpdate();
+    highscoreScreen();
+});
