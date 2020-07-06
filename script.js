@@ -71,21 +71,21 @@ function highscoreScreen() {
 }
 
 function highscoreUpdate() {
-    var initialsInput = document.querySelector("#initials");
-    if (initialsInput === "") {
+    var initialsInput = document.querySelector("#initials").value;
+    console.log(initialsInput);
+    if (!initialsInput) {
         return
     } else {
-        var userLog = initialsInput.value.trim() + ": " + timeLeft;
+        var userLog = initialsInput.trim() + ": " + timeLeft;
         var listHighscore = JSON.parse(localStorage.getItem("listHighscore"));
-        if (listHighscore != null){
-            listHighscore.push(userLog);
-        } else {
+        if(!listHighscore) { //if listHighscore is null or undefined
             listHighscore = [];
-            listHighscore.push(userLog);
-        }
-        initialsInput.value = "";
+        } 
+        listHighscore.push(userLog); 
+        document.querySelector("#initials").value = "";
     }
     localStorage.setItem("listHighscore", JSON.stringify(listHighscore)); //create a local storage memory item called listHighscores as the array scores in code
+    highscoreScreen();
 }
 
 document.querySelector(".btn-start").addEventListener("click", function () {
@@ -96,5 +96,4 @@ document.querySelector("ul").addEventListener("click", userSelect); //when user 
 document.querySelector(".btn-score").addEventListener("click", highscoreScreen);
 document.querySelector("#submit").addEventListener("click", function(){
     highscoreUpdate();
-    highscoreScreen();
 });
