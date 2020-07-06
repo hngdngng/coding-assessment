@@ -57,12 +57,11 @@ function userScore() {
 
 function timer() {
     timerInterval = setInterval(function () {
-        timeLeft--; //decrease by 1
         timeDisplay.textContent = "Time: " + timeLeft;
-
         if (timeLeft <= 0) {
             endQuiz();
         }
+        timeLeft--; //decrease by 1
     }, 1000); //executes code inside setInterval function every second (1000ms)
 }
 
