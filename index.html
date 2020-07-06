@@ -18,7 +18,7 @@
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
             <button class="btn btn-light btn-score" type="button">View Highscores</button>
-            <h6 id="timer">Time: 10</h6>
+            <h6 id="timer">Time: 75</h6>
         </form>
     </nav>
     <!-- Start screen display body, displayed in beginning-->
@@ -32,21 +32,21 @@
     <div class="container-md quiz-body">
         <h2 id="question"></h2>
         <ul>
-            <li><button class="btn btn-outline-secondary choices" id="c1" type="button">choice</button></li>
-            <li><button class="btn btn-outline-secondary choices" id="c2" type="button">choice</button></li>
-            <li><button class="btn btn-outline-secondary choices" id="c3" type="button">choice</button></li>
-            <li><button class="btn btn-outline-secondary choices" id="c4" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary" id="c1" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary" id="c2" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary" id="c3" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary" id="c4" type="button">choice</button></li>
         </ul>
     </div>
     <!-- End screen, hidden until questionnaire is complete -->
     <div class="container-md end-body">
         <h1>All done!</h1>
-        <h6>Your final score is 0.</h6>
+        <h6 id="score">Your final score is 0.</h6>
         <form class="form-inline">
             <div class="form-group">
               <label for="initials">Enter initials</label>
               <input type="text" id="initials" class="form-control mx-sm-3">
-              <button type="submit" class="btn btn-primary my-1">Submit</button>
+              <button type="button" class="btn btn-primary" id="submit">Submit</button>
             </div>
           </form>
     </div>
