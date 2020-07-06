@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Published on https://hngdngng.github.io/coding-assessment/ -->
 <html lang="en">
 
 <head>
@@ -17,20 +18,25 @@
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
             <button class="btn btn-light btn-score" type="button">View Highscores</button>
-            <h6 id="timer">Time: 0</h6>
+            <h6 id="timer">Time: 10</h6>
         </form>
     </nav>
     <!-- Start screen display body, displayed in beginning-->
     <div class="container-md start-body">
         <h1>Coding Quiz Challenge</h1>
-        <h6>Answer the following code-related questions within the time limit. Keep in mind that incorrect answers will
-            penalize your score and time by 10s.</h6>
+        <h6>Answer the following code-related questions within the time limit. Incorrect answers will
+            penalize your time and score by 10s.</h6>
         <button class="btn btn-outline-primary btn-start" type="button">Start Quiz</button>
     </div>
     <!--  Questionnaire display body, hidden until 'Start Quiz' is selected-->
     <div class="container-md quiz-body">
-        <h2></h2>
-        <ol></ol>
+        <h2 id="question"></h2>
+        <ul>
+            <li><button class="btn btn-outline-secondary choices" id="c1" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary choices" id="c2" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary choices" id="c3" type="button">choice</button></li>
+            <li><button class="btn btn-outline-secondary choices" id="c4" type="button">choice</button></li>
+        </ul>
     </div>
     <!-- End screen, hidden until questionnaire is complete -->
     <div class="container-md end-body">
