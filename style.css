@@ -1,24 +1,28 @@
-nav h6 {
-    padding: .375rem 2rem;
+/* Published on https://hngdngng.github.io/coding-assessment/ */
+
+/* Timer header*/
+nav #timer {
+    padding: .375rem 1rem;
     margin: 0;
     position: absolute;
     right: 0;
 }
 
+/* All main content */
 .container-md {
     max-width: 600px;
     padding-top: 30px;
 }
-
+/* Start display */
 .start-body {
     display: block;
     text-align: center;
 }
-
+/* Quiz display */
 .quiz-body {
     display: none;
 }
-
+/* End display */
 .end-body {
     display: none;
 }

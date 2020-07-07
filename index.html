@@ -28,7 +28,7 @@
             penalize your time and score by 10s.</h6>
         <button class="btn btn-outline-primary btn-start" type="button">Start Quiz</button>
     </div>
-    <!--  Questionnaire display body, hidden until 'Start Quiz' is selected-->
+    <!--  Questionnaire display body, not displayed until 'Start Quiz' is selected-->
     <div class="container-md quiz-body">
         <h2 id="question"></h2>
         <ul>
@@ -38,11 +38,11 @@
             <li><button class="btn btn-outline-secondary" id="c4" type="button">choice</button></li>
         </ul>
     </div>
-    <!-- End screen, hidden until questionnaire is complete -->
+    <!-- End screen, not displayed until questionnaire is complete -->
     <div class="container-md end-body">
         <h1>All done!</h1>
         <h6 id="score">Your final score is 0.</h6>
-        <form class="form-inline">
+        <form class="form-inline" id="form" method="POST">
             <div class="form-group">
               <label for="initials">Enter initials</label>
               <input type="text" id="initials" class="form-control mx-sm-3">

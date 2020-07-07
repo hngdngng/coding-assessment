@@ -1,3 +1,5 @@
+// Published on https://hngdngng.github.io/coding-assessment/ 
+
 var highscoreDisplay = document.querySelector("#user-highscores");
 var listHighscore = JSON.parse(localStorage.getItem("listHighscore"));
 
@@ -9,10 +11,14 @@ if (listHighscore) {
 
 function renderHighscore() {
     for (var i = 0; i<listHighscore.length; i++) {
+        listHighscore.sort(function(a,b) {
+            return b.score-a.score; //go through each of the objects and compare score values, sort from high to low
+        });
         var li = document.createElement("li");
-        li.textContent = listHighscore[i]; 
-        highscoreDisplay.appendChild(li); 
+        li.textContent = listHighscore[i].name + ": " + listHighscore[i].score; 
+        highscoreDisplay.appendChild(li); //append and display score on page
     }
+
 }
 
 document.querySelector(".btn-back").addEventListener("click", function(){
