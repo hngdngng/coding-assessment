@@ -22,6 +22,11 @@ nav #timer {
 .quiz-body {
     display: none;
 }
+
+.quiz-body ul{
+    line-height: 3rem;
+}
+
 /* End display */
 .end-body {
     display: none;
