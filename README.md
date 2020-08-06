@@ -1,7 +1,7 @@
 # Coding Assessment
 
 ## Application
-Published on https://hngdngng.github.io/coding-assessment/
+Published on https://hngdngng.github.io/Coding-Assessment/
 
 ## Description
 The goal of this project was to create a coding assessment application that includes a series of multiple-choice questions to test the user's coding knowledge. The user will be under a timer after beginning the assessment. At the end of the assessment the user shall be able to record their initials and view how they rank with other users on the same application.
